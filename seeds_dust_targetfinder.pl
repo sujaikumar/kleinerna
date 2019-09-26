@@ -1,6 +1,9 @@
 #!/usr/bin/env perl
 
-# for each line, split into two, first part smallRNA, second part targetRNA
+# Script for taking a file with two columns - one with small RNA, one with target RNA, and finding 
+# * seeds: 6mer, 6mer_offset, 7mer_m8, 7mer_A1, 8mer
+# * whether it is low complexity (uses dustmasker from NCBI blast+ suite)
+# * what the targetfinder pairing/score is for each pair. Rather than call targetfinder.pl separately, the code for targetfinder is reused in this script
 
 use strict;
 use warnings;
